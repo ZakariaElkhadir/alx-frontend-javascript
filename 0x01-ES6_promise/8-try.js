@@ -1,4 +1,3 @@
-
 /**
  * Function that divides two numbers.
  *
@@ -7,9 +6,10 @@
  * @returns {number} The result of the division.
  * @throws {Error} If the denominator is 0.
  */
-export default function divideFunction(numerator, denominator) {
+function divideFunction(numerator, denominator) {
   if (denominator === 0) {
     throw Error('cannot divide by 0');
   }
   return numerator / denominator;
 }
+export default divideFunction;
