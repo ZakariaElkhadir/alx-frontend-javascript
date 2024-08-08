@@ -8,25 +8,26 @@ class Pricing {
 
   get amount() { return this._amount; }
 
-  set amount(value) { 
+  set amount(value) {
     if (typeof value !== 'number') {
       throw new TypeError('Amount must be a number');
     }
     this._amount = value;
-   }
+  }
 
   get currency() { return this._currency; }
 
   set currency(value) { return this._currency = value; }
 
-displayFullPrice() {
+  displayFullPrice() {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
-}
-static convertPrice(amount, conversionRate) {
+  }
+
+  static convertPrice(amount, conversionRate) {
     if (typeof amount !== 'number' || typeof conversionRate !== 'number') {
-        throw new TypeError('Amount and conversion rate must be numbers');
+      throw new TypeError('Amount and conversion rate must be numbers');
     }
     return amount * conversionRate;
-}
+  }
 }
 export default Pricing;
