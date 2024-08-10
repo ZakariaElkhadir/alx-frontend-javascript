@@ -1,5 +1,15 @@
 import Currency from './3-currency';
 
+/**
+ * Represents a pricing object.
+ *
+ * @class
+ * @constructor
+ * @param {number} amount - The amount of the pricing.
+ * @param {object} currency - The currency of the pricing.
+ * @param {string} currency.name - The name of the currency.
+ * @param {string} currency.code - The code of the currency.
+ */
 class Pricing {
   constructor(amount, currency) {
     this._amount = amount;

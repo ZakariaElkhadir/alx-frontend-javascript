@@ -1,3 +1,7 @@
+/**
+ * Represents a Holberton Course.
+ * @class
+ */
 class HolbertonCourse {
   constructor(name, length, students) {
     this.name = name;

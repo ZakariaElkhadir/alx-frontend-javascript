@@ -1,3 +1,7 @@
+/**
+ * Represents a building.
+ * @class
+ */
 class Building {
   constructor(sqft) {
     if (this.constructor !== Building && this.evacuationWarningMessage === Building.prototype.evacuationWarningMessage) {

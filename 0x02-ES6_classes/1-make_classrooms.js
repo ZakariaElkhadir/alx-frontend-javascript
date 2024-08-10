@@ -1,5 +1,10 @@
 import ClassRoom from './0-classroom';
 
+/**
+ * Initializes and returns an array of ClassRoom objects.
+ *
+ * @returns {Array<ClassRoom>} An array of ClassRoom objects.
+ */
 function initializeRooms() {
   const room1 = new ClassRoom(19);
   const room2 = new ClassRoom(20);

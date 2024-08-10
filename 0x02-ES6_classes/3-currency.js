@@ -1,3 +1,7 @@
+/**
+ * Represents a currency.
+ * @class
+ */
 class Currency {
   constructor(code, name) {
     this._code = code;
