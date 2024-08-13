@@ -1,19 +1,11 @@
-function createInt8TypedArray(length, position, value){
-    const buffer = new ArrayBuffer(length);
-    const int8view = new Int8Array(buffer);
+function createInt8TypedArray(length, position, value) {
+  const buffer = new ArrayBuffer(length);
+  const dataView = new DataView(buffer);
 
-    if (position >= length || position < 0) {
-        throw Error('Position outside range');
-    }
-
-    int8view[position] = value;
-
-    return{
-        "byteLength": int8view.length,
-        "byteoffset": int8view.byteOffset,
-        "buffer": buffer
-
-        
-    }
+  if (position >= length || position < 0) {
+    throw Error('Position outside range');
+  }
+  dataView.setInt8(position, value);
+  return dataView;
 }
 export default createInt8TypedArray;
