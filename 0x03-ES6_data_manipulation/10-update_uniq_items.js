@@ -1,18 +1,15 @@
-function updateUniqueItems(map, product, quantity) {
-    if (!(map instanceof Map)) {
-      throw new Error('The first argument must be a Map instance.');
-    }
-    
-    map.forEach((value, key) => {
-      if (key === product) {
-        if (quantity === 1) {
-          map.set(key, quantity * 100);
-        } else {
-          map.set(key, quantity);
-        }
-      }
-    });
+function updateUniqueItems(map) {
+  if (!(map instanceof Map)) {
+    throw new Error('The first argument must be a Map instance.');
   }
-  
-  export default updateUniqueItems;
-  
+  /*
+    the code below is to update
+    the value of the key Pasta and Rice to 100 */
+  map.forEach((value, key) => {
+    if (value === 1) {
+      map.set(key, 100);
+    }
+  });
+}
+
+export default updateUniqueItems;
