@@ -44,4 +44,14 @@ function executeWork(employee: Director | Teacher) {
   }
 }
 let testt = executeWork(new (createEmployee(1000))());
-console.log(testt);
+//console.log(testt);
+
+type Subjects = "Math" | "History";
+function teachClass(todayClass: Subjects) {
+  if(todayClass === "Math"){
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
+console.log(teachClass("Math"));

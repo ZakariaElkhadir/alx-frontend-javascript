@@ -38,4 +38,12 @@ function executeWork(employee) {
     }
 }
 var testt = executeWork(new (createEmployee(1000))());
-console.log(testt);
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else {
+        return "Teaching History";
+    }
+}
+console.log(teachClass("Math"));
