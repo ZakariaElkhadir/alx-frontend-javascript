@@ -10,5 +10,22 @@ function printTeacher(firstName, lastName) {
     var last = lastName;
     return "".concat(first, ". ").concat(last);
 }
-var result = printTeacher('Brother', 'Rachid');
-console.log(result);
+var result = printTeacher('John', 'Doe');
+var StudentClass = /** @class */ (function () {
+    function StudentClass(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    StudentClass.prototype.workOnHomework = function () {
+        return "Currently working";
+    };
+    StudentClass.prototype.displayName = function () {
+        return this.firstName;
+    };
+    StudentClass.prototype.result = function () {
+        console.log(this.workOnHomework() + '\n' + this.displayName());
+    };
+    return StudentClass;
+}());
+var student = new StudentClass('John', 'Doe');
+console.log(student.result());
